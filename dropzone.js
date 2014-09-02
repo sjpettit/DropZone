@@ -1511,9 +1511,13 @@ require.register("dropzone/lib/dropzone.js", function (exports, module) {
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             node = _ref[_i];
             formData.append(this._getParamName(i), files[i], node.textContent);
+            console.log(this._getParamName(i));
+            console.log(files[i]);
           }
-          console.log(formData);
+          
       }
+      console.log(formData);
+      console.log(document.formData);
       return xhr.send(formData);
     };
 
